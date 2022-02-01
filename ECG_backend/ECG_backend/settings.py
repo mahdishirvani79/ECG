@@ -76,25 +76,23 @@ WSGI_APPLICATION = 'ECG_backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'ecg_database',
-        'USER': 'postgres',
-        'PASSWORD': '12345678',
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
-}
-
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': 'mydatabase', # This is where you put the name of the db file. 
-#                  # If one doesn't exist, it will be created at migration time.
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'ecg_database',
+#         'USER': 'postgres',
+#         'PASSWORD': '12345678',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
 #     }
 # }
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 
 # Password validation
@@ -116,7 +114,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 TELEGRAM = {
-    'bot_token':"5038215442:AAEnwT2-kQ8407MnZBtPvAE3n3ZoOShSzv4"
+    'bot_token': "5038215442:AAEnwT2-kQ8407MnZBtPvAE3n3ZoOShSzv4"
 }
 
 
